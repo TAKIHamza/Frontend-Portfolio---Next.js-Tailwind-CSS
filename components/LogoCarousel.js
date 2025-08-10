@@ -6,10 +6,10 @@ const InfiniteLogoCarousel = ({ logos, speed = 20 }) => {
   const duplicatedLogos = [...logos, ...logos, ...logos];
   
   return (
-    <div className="relative w-5/6 overflow-hidden py-2 justify-center">
+    <div className="relative w-full px-2 lg:px-0 lg:w-5/6 overflow-hidden py-2 justify-center">
       {/* Masque gradient pour l'effet de fondu */}
-      <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-slate-50 to-transparent z-10" />
-      <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-slate-50 to-transparent z-10" />
+      <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-slate-50/95 to-transparent z-10" />
+      <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-slate-50/95 to-transparent z-10" />
       
       <motion.div
         className="flex"

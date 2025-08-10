@@ -151,7 +151,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             style={contentAnimation.carousel}
-            className="w-full justify-center "
+            className="w-full justify-items-center "
           >
             <LogoCarousel 
               logos={logos} 
