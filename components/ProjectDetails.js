@@ -115,7 +115,7 @@ export default function ProjectDetails({ project = mockProject }) {
 
   return (
     <motion.div 
-      className="relative min-h-screen bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] pb-24 pt-10 sm:pt-24"
+      className="relative min-h-screen bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] pb-24 pt-10 sm:pt-9"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

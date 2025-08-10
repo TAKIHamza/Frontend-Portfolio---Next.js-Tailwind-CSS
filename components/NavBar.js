@@ -61,12 +61,12 @@ export default function NavBar() {
                         <div className="flex items-center justify-between py-1 md:py-2 md:block">
                             <motion.h1 
                                 whileHover={{ scale: 1.05 }}
-                                className="text-2xl md:text-3xl font-bold font-mono 
-                                    bg-gradient-to-r from-cyan-800 via-sky-700 to-cyan-600
+                                className="text-xl md:text-2xl font-bold font-mono cursor-pointer
+                                    bg-gradient-to-r from-cyan-900 via-sky-700 to-cyan-600
                                     bg-clip-text text-transparent
-                                    hover:from-pink-600 hover:to-purple-600 
+                                    hover:from-gray-600 hover:to-gray-300 
                                     transition-all duration-300">
-                                TAKI
+                                &lt;TAKI.Dev/&gt;
                             </motion.h1>
                             <div className="md:hidden">
                                 <motion.button
