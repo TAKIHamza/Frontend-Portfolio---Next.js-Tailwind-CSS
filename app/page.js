@@ -3,7 +3,7 @@ import ContactButton from "@/components/ContactButton";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import NavBar from "@/components/NavBar";
-import ProjectsSection from "@/components/ProjectsSection";
+import ProjectsSection from "@/components/project/ProjectsSection";
 
 
 

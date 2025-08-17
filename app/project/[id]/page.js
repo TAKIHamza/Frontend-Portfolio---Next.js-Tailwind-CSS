@@ -1,5 +1,5 @@
 // app/project/[id]/page.js
-import ProjectDetails from '@/components/ProjectDetails';
+import ProjectDetails from '@/components/project/ProjectDetails';
 import { getProjectDetails } from '@/services/project';
 
 export default async function ProjectPage({ params }) {

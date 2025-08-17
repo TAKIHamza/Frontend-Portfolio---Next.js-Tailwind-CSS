@@ -94,13 +94,13 @@ const ContactButton = ({ currentUser = null }) => {
       {/* Contact Form */}
       {isVisible && (
         <div className={`
-          absolute bottom-14 right-0 sm:bottom-20
-          w-72 sm:w-96 md:w-[28rem]
+          absolute bottom-14 right-0 md:right-72 sm:bottom-10
+          w-[22rem] sm:w-96 md:w-[39rem]
           bg-white dark:bg-gray-800
-          border border-gray-200 dark:border-gray-700
+          border border-teal-500 dark:border-gray-700
           rounded-xl
           shadow-2xl
-          p-4 sm:p-6
+          p-6
           transition-all duration-300 ease-in-out
           ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'}
         `}>

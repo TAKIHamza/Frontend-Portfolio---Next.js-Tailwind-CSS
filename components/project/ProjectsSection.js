@@ -85,9 +85,9 @@ export default function ProjectsSection() {
       style={{ y: sectionY, opacity: sectionOpacity }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 min-h-screen">
         <motion.h2 
-          className="text-3xl text-center font-bold sm:text-4xl md:text-5xl mb-14 pt-3"
+          className="text-3xl text-center font-bold sm:text-4xl md:text-5xl mb-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 10 }}
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
         </motion.h2>
 
         <motion.div 
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 "
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -126,21 +126,36 @@ export default function ProjectsSection() {
                   />
                 </motion.div>
                 <Link href={`/project/${project.id}`}>
-                  <motion.div 
-                    className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-6 text-white opacity-0 group-hover:opacity-100"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <motion.h3 className="text-lg font-bold">{project.title}</motion.h3>
-                    <motion.p className="text-sm line-clamp-2">{project.description}</motion.p>
-                    {project.technologies && (
-                      <motion.p className="text-xs mt-2">
-                        <span className="font-semibold">Tech:</span> {project.technologies}
-                      </motion.p>
-                    )}
-                  </motion.div>
-                </Link>
+  <motion.div 
+    className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black via-cyan-900/90 to-transparent p-6"
+    initial={{ opacity: 0 }}
+    whileHover={{ opacity: 1 }}
+    transition={{ duration: 0.3, ease: "easeOut" }}
+  >
+    {/* Title - Bright with subtle shadow */}
+<h3 className="text-xl font-semibold text-cyan-100 tracking-tight drop-shadow-md 
+              hover:text-white transition-colors duration-300">
+  {project.title}
+</h3>
+    
+    {/* Description - Soft white with great readability */}
+    <p className="text-sm text-white mt-1 leading-snug line-clamp-2 font-normal">
+      {project.description}
+    </p>
+    
+    {/* Tech Stack - Vibrant accent */}
+    {project.technologies && (
+      <div className="mt-2">
+        <span className="text-xs font-semibold text-amber-300/80 tracking-wider">
+          TECH STACK
+        </span>
+        <p className="text-xs text-cyan-50/80 font-light  tracking-wide">
+          {project.technologies}
+        </p>
+      </div>
+    )}
+  </motion.div>
+</Link>
               </motion.div>
             ))}
           </AnimatePresence>

@@ -77,7 +77,7 @@ export default function HeroSection() {
       {/* Optimized Background */}
       <motion.div 
         style={{ y: yBg, opacity: opacityBg }}
-        className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
+        className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:5.7rem_3.7rem]"
       >
         <motion.div
           initial={{ scale: 1.1, opacity: 0 }}

@@ -123,11 +123,11 @@ export default function ProjectDetails({ project = mockProject }) {
       {/* Back button */}
       <motion.div 
   variants={itemVariants}
-  className="fixed top-4 left-4 z-50 sm:top-6 sm:left-6"
+  className="fixed top-2 left-2 z-50 sm:top-2 sm:left-2 "
 >
   <Link 
     href="/#projects" 
-    className="flex items-center group bg-white/90 backdrop-blur-sm px-3 py-2 sm:px-4 sm:py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200"
+    className="flex items-center group bg-white/90 backdrop-blur-sm px-3 py-2 sm:px-4 sm:py-3 rounded-xl   shadow-md hover:shadow-lg transition-all duration-300 border border-green-600"
   >
     <FiChevronLeft className="w-5 h-5 mr-2 text-gray-700 group-hover:text-teal-600 transition-colors" />
     <span className="text-sm sm:text-base lg:text-lg text-gray-700 font-medium group-hover:text-teal-600 transition-colors">
@@ -142,13 +142,13 @@ export default function ProjectDetails({ project = mockProject }) {
         {/* Project header */}
         <motion.div 
           variants={itemVariants}
-          className="text-center mb-12"
+          className="text-center "
         >
           {project.is_featured && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center bg-gradient-to-r from-teal-100 to-blue-100 px-4 py-2 rounded-full mb-4"
+              className="inline-flex items-center bg-gradient-to-r from-teal-100 to-blue-100 px-4 py-2 rounded-full "
             >
               <FiStar className="w-4 h-4 mr-1 text-teal-600" />
               <span className="text-sm font-medium text-teal-800">
@@ -156,13 +156,7 @@ export default function ProjectDetails({ project = mockProject }) {
               </span>
             </motion.div>
           )}
-          <motion.h1 
-            className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            {project.title}
-          </motion.h1>
+         
         </motion.div>
 
         {/* Main content */}
@@ -172,6 +166,14 @@ export default function ProjectDetails({ project = mockProject }) {
             variants={itemVariants}
             className="lg:col-span-2 space-y-8"
           >
+            <motion.h2
+              className="block md:hidden text-2xl font-semibold text-gray-900 mb-6 border-l-4 border-teal-500 pl-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              {project.title}
+            </motion.h2>
+
             {/* Featured image */}
             <div className="relative rounded-2xl overflow-hidden bg-white shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
               <img
@@ -251,8 +253,10 @@ export default function ProjectDetails({ project = mockProject }) {
             <div className="prose prose-lg max-w-none bg-white p-8 rounded-xl shadow-lg border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Project Details</h3>
               <div className="space-y-6 text-gray-700">
-                <p>{project.long_description || project.description}</p>
-                
+               
+                <div className="whitespace-pre-wrap">
+                     { project.description}
+                </div>
                 {project.features && (
                   <div>
                     <h4 className="text-xl font-semibold mb-3">Key Features</h4>
@@ -280,8 +284,16 @@ export default function ProjectDetails({ project = mockProject }) {
           {/* Right column - Meta info */}
           <motion.div 
             variants={itemVariants}
-            className="space-y-6"
+            className="space-y-6 mt-9"
           >
+            <motion.h2
+              className="hidden md:block text-3xl md:text-3xl font-semibold text-gray-900 mb-6 border-l-4 border-teal-500 pl-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              {project.title}
+            </motion.h2>
+
             {/* Technologies */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Technologies Used</h3>
@@ -298,7 +310,7 @@ export default function ProjectDetails({ project = mockProject }) {
             </div>
 
             {/* Links */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 space-y-4">
+            <div className="bg-white p-6  rounded-xl shadow-lg border border-gray-200 space-y-4">
               <h3 className="text-xl font-bold text-gray-900">Project Links</h3>
               <div className="space-y-3">
                 {project.github_url && (
@@ -327,7 +339,7 @@ export default function ProjectDetails({ project = mockProject }) {
             </div>
 
             {/* Project info */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 space-y-4">
+            <div className="bg-white  p-6 rounded-xl shadow-lg border border-gray-200 space-y-4">
               <h3 className="text-xl font-bold text-gray-900">Project Information</h3>
               <div className="space-y-4">
                 <div>
