@@ -94,9 +94,9 @@ export default function NavBar() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 100 }}
-            className="w-full  backdrop-blur-xl top-0 xl:fixed xl:w-full xl:top-0 xl:left-0 xl:z-30 fixed z-50 border-b border-gray-200 dark:border-gray-700"
+            className="w-full  backdrop-blur-xl top-0 xl:fixed xl:w-full xl:top-0 xl:left-0 xl:z-30 fixed z-50 border-b border-gray-200 "
         >
-            <div className="container mx-auto w-full bg-white/80 dark:bg-gray-900/80">
+            <div className="container mx-auto w-full bg-white/80 ">
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     {/* Logo and mobile menu button */}
                     <div className="flex items-center justify-between py-3 md:py-4 md:block">
@@ -114,7 +114,7 @@ export default function NavBar() {
                         <div className="md:hidden">
                             <motion.button
                                 whileTap={{ scale: 0.9 }}
-                                className="p-2 text-gray-700 dark:text-gray-300 rounded-md outline-none"
+                                className="p-2 text-gray-700  rounded-md outline-none"
                                 onClick={() => setNavbar(!navbar)}
                                 aria-label="Toggle menu"
                             >
@@ -141,7 +141,7 @@ export default function NavBar() {
                                                 href={item.path}
                                                 className="block md:px-3 group"
                                             >
-                                                <div className="relative text-gray-600 dark:text-gray-300
+                                                <div className="relative text-gray-600 
                                                         before:absolute before:-bottom-2 md:before:-bottom-3 before:origin-left before:w-full before:h-0.5 before:mx-auto before:mt-auto before:rounded-full before:bg-cyan-800 dark:before:bg-cyan-400 before:transition before:scale-x-0 group-hover:before:scale-x-100">
                                                     <span className="transition group-hover:text-cyan-700 dark:group-hover:text-cyan-400">{item.name}</span>
                                                 </div>
@@ -171,7 +171,7 @@ export default function NavBar() {
                                                 href={item.path} 
                                                 className="block md:px-3 group"
                                             >
-                                                <div className="relative text-gray-600 dark:text-gray-300
+                                                <div className="relative text-gray-600 
                                                         before:absolute before:-bottom-2 md:before:-bottom-3 before:origin-left before:w-full before:h-0.5 before:mx-auto before:mt-auto before:rounded-full before:bg-cyan-800 dark:before:bg-cyan-400 before:transition before:scale-x-0 group-hover:before:scale-x-100">
                                                     <span className="transition group-hover:text-cyan-700 dark:group-hover:text-cyan-400">{item.name}</span>
                                                 </div>
@@ -204,17 +204,17 @@ export default function NavBar() {
                             animate="open"
                             exit="closed"
                             variants={mobileMenuVariants}
-                            className="md:hidden fixed top-0 right-0 h-screen w-40 max-w-full bg-white dark:bg-gray-900 z-50 "
+                            className="md:hidden fixed top-0 right-0 h-screen w-40 max-w-full bg-white  z-50 "
                         >
                             {/* Sidebar Header */}
-                            <div className="flex justify-center p-4 border-b border-gray-200 dark:border-gray-700 ">
+                            <div className="flex justify-center p-4 border-b border-gray-200  ">
                         
                                 <button
-                                    className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                                    className="p-2 rounded-full hover:bg-gray-200  transition-colors"
                                     onClick={() => setNavbar(false)}
                                     aria-label="Close menu"
                                 >
-                                    <FiX className="w-6 h-6 text-gray-800 dark:text-gray-200" />
+                                    <FiX className="w-6 h-6 text-gray-800 " />
                                 </button>
                             </div>
 
@@ -231,10 +231,10 @@ export default function NavBar() {
                                     >
                                         <Link 
                                             href={item.path}
-                                            className="flex items-center gap-4 p-3 rounded-lg text-lg font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                            className="flex items-center gap-4 p-3 rounded-lg text-lg font-medium text-gray-800  hover:bg-gray-100  transition-colors"
                                             onClick={() => setNavbar(false)}
                                         >
-                                            <span className="text-cyan-600 dark:text-cyan-400">
+                                            <span className="text-cyan-600 ">
                                                 {item.icon}
                                             </span>
                                             {item.name}
